@@ -32,7 +32,8 @@ public class ApiManager {
 
         RequestBuilder builder = new RequestBuilder(Request.Method.POST, uri.toString(), UserResponse.class, listener, errorListener)
                 .putParam("email", email)
-                .putParam("password", password);
+                .putParam("password", password)
+                .isCached(false);
 
         return mRequestQueue.add(builder.build());
     }

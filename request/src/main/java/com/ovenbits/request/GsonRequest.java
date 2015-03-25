@@ -31,6 +31,8 @@ public class GsonRequest<T> extends Request<T> {
         mHeaders  = builder.getHeaders();
         mParams   = builder.getParams();
         mCachedTime = builder.getCachedTime();
+
+        setShouldCache(mCachedTime > 0);
     }
 
     @Override

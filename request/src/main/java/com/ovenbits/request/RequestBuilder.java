@@ -25,6 +25,7 @@ public class RequestBuilder<T> {
     private Map<String,String> mHeaders = new HashMap<String, String>();
     private int mCachedTime = NO_CACHE;
     private ContentType mContentType = ContentType.FORM_URL_ENCODED;
+    private boolean mShouldCache = true;
 
     public enum ContentType {
         JSON,

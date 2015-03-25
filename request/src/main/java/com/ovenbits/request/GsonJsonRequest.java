@@ -29,6 +29,8 @@ public class GsonJsonRequest<T> extends JsonRequest<T> {
         mListener   = builder.getListener();
         mHeaders    = builder.getHeaders();
         mCachedTime = builder.getCachedTime();
+
+        setShouldCache(mCachedTime > 0);
     }
 
     @Override
